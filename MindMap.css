@@ -1,0 +1,50 @@
+.node {
+    cursor: grab;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .node:hover {
+    transform: scale(1.1); /* Add a scaling effect on hover */
+  }
+  
+  .node circle {
+    fill: #3498db; /* Node color */
+    stroke: #2980b9; /* Node border color */
+    stroke-width: 3;
+    transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
+  }
+  
+  .node:hover circle {
+    fill: #2980b9; /* Node color on hover */
+  }
+  
+  .node text {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-anchor: middle;
+    fill: #ecf0f1; /* Text color */
+  }
+  
+  /* Style for connections */
+  .connection {
+    stroke: #bdc3c7; /* Connection line color */
+    stroke-width: 2;
+    stroke-dasharray: 5, 5; /* Add a dashed line effect */
+    transition: stroke 0.3s ease-in-out;
+  }
+  
+  .connection:hover {
+    stroke: #7f8c8d; /* Connection line color on hover */
+  }
+  
+  .connection-line {
+  stroke: #bdc3c7; /* Connection line color */
+  stroke-width: 2;
+  stroke-dasharray: 5, 5; /* Add a dashed line effect */
+  transition: stroke 0.3s ease-in-out;
+}
+
+.connection-line:hover {
+  stroke: #7f8c8d; /* Connection line color on hover */
+}
