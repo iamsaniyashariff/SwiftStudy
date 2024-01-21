@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftStudy</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #d3fffd;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+
+        header {
+            background-color: #61dfdf;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 36px; /* Increased font size for SwiftStudy heading */
+        }
+
+        .quote {
+            font-style: italic;
+            color: #666;
+            margin: 10px 0 20px;
+            font-size: 18px;
+        }
+
+        .get-started-btn {
+            background-color: #66ffb3;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+
+        .get-started-btn:hover {
+            background-color: #4ec981;
+        }
+
+        nav {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        nav h2 {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #61dfdf;
+        }
+
+        .btn-nav {
+            display: inline-block;
+            background-color: #61dfdf;
+            color: #fff;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+
+        .btn-nav:hover {
+            background-color: #4ec981;
+        }
+
+        .features {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .feature {
+            background-color: #cfa2cf;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+        }
+
+        .feature h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 16px;
+        }
+
+        .feature a {
+            display: block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #61dfdf;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .feature a:hover {
+            background-color: #4ec981;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1><i><b>SwiftStudy</b></i></h1>
+            <p class="quote">"Your all in one study buddy"</p>
+        </div>
+        <nav>
+            <h2>
+                <a href="login.html" class="btn-nav">Login</a>
+                <a href="profile.html" class="btn-nav">Profile</a>
+                <a href="about.html" class="btn-nav">About Us</a>
+            </h2>
+        </nav>
+        <a href="getstarted.html" class="get-started-btn">Get Started</a>
+    </header>
+
+    <div class="features">
+        <div class="feature">
+            <h2>Text Summarizer</h2>
+            <p>Effortlessly condense large amounts of text into concise summaries for efficient studying.</p>
+            <a href="textsummarizer.html">Text Summarizer</a>
+        </div>
+
+        <div class="feature">
+            <h2>Flashcards</h2>
+            <p>Enhance your memory retention with interactive flashcards for effective learning.</p>
+            <a href="flashcard.html">Flashcards</a>
+        </div>
+
+        <div class="feature">
+            <h2>Mind Maps</h2>
+            <p>Visualize complex concepts and relationships with mind maps, making learning engaging and intuitive.</p>
+            <!-- Include your Mind Maps code here -->
+        </div>
+
+        <div class="feature">
+            <h2>Quiz Yourself</h2>
+            <p>Challenge Your Mind: Dive into Discovery with Quiz Yourself!</p>
+            <a href="quiz.html">Quiz Yourself</a>
+        </div>
+    </div>
+</body>
+
+</html>

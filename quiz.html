@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Swift Study</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #66c2ff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            color: #fff;
+            margin: 0;
+        }
+
+        .quiz-content {
+            margin: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #66c2ff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><i>SwiftStudy</i></h1>
+    </header>
+
+    <div class="quiz-content">
+        <h2>Create Your Quiz</h2>
+        <p>Enter the text for which you want to create a quiz:</p>
+
+        <label for="quiz-text">Quiz Text:</label>
+        <textarea id="quiz-text" name="quiz-text" placeholder="Enter your text here..."></textarea>
+
+        <button id="generate-quiz">Generate Quiz</button>
+
+        <!-- Quiz questions and options will be displayed dynamically here -->
+    </div>
+
+    <script>
+        // Add JavaScript logic for quiz generation based on user input
+        document.getElementById('generate-quiz').addEventListener('click', function() {
+            // Fetch the user input from the textarea
+            var quizText = document.getElementById('quiz-text').value;
+
+            // Implement the logic to generate quiz questions based on the input
+            // Update the content of the .quiz-content div accordingly
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarizer</title>
+    <script src="https://unpkg.com/bert-extractive-summarizer/dist/bert-extractive-summarizer.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        #container {
+            text-align: center;
+            padding: 20px;
+            background-color: #336699;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #inputText {
+            width: 80%;
+            height: 150px;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: white;
+            background-color: #003366;
+        }
+
+        #outputSummary {
+            color: white;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #66ccff;
+            color: #003366;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 style="color: white;">Text Summarizer</h1>
+        <textarea id="inputText" placeholder="Enter text (up to 500 words)"></textarea>
+        <button onclick="summarizeText()">Summarize</button>
+        <p id="outputSummary"></p>
+    </div>
+
+    <script>
+        async function summarizeText() {
+            var inputText = document.getElementById("inputText").value;
+
+            // Ensure the input text is not empty
+            if (inputText.trim() === "") {
+                alert("Please enter text before summarizing.");
+                return;
+            }
+
+            // Limit input text to 500 words
+            var words = inputText.split(/\s+/);
+            if (words.length > 500) {
+                alert("Input text should be up to 500 words.");
+                return;
+            }
+
+            // Use the bert-extractive-summarizer library for extractive summarization
+            var summarizer = new BERTExtractiveSummarizer();
+            var summary = await summarizer.summarize(inputText, 200);  // Extractive summarization with a limit of 200 words
+
+            document.getElementById("outputSummary").innerText = summary;
+        }
+    </script>
+</body>
+</html>

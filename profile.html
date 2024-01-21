@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift Study - Profile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #6da1db;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #66c2ff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            color: #fff;
+            margin: 0;
+        }
+
+        .profile-content {
+            margin: 20px;
+            background-color: #a9f7df;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #e59c9c;
+            border-radius: 5px;
+        }
+
+        .save-btn {
+            background-color: #66c2ff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><i>SwiftStudy</i></h1>
+    </header>
+
+    <div class="profile-content">
+        <div class="profile-image">
+            <!-- Include the user's profile image here -->
+            <img src="profile-image.jpg" alt="Profile Image">
+        </div>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="YourUsername">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="your.email@example.com">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" value="********">
+
+        <!-- You can add more fields as needed -->
+
+        <a href="#" class="save-btn">Save Changes</a>
+    </div>
+</body>
+
+</html>

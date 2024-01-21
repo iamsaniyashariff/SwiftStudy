@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarizer</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(161, 230, 195); /* Mint green background */
+        }
+
+        #container {
+            text-align: center;
+            padding: 20px;
+            background-color: #336699;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #inputText {
+            width: 80%;
+            height: 150px;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: white;
+            background-color: #003366;
+        }
+
+        #outputSummary {
+            color: white;
+        }
+
+        button {
+            background-color: #66ccff;
+            color: #003366;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <script src="summarizer.js"></script>
+    <script>
+        function summarizeText() {
+            var inputText = document.getElementById("inputText").value;
+
+            // Ensure the input text is not empty
+            if (inputText.trim() === "") {
+                alert("Please enter text before summarizing.");
+                return;
+            }
+            var text = inputText;
+            var result = summarizer(text);
+
+            document.getElementById("outputSummary").innerText = result;
+        }
+    </script>
+    <div id="container">
+        <h1 style="color: white;">Text Summarizer</h1>
+        <textarea id="inputText" placeholder="Enter up to 500 words..."></textarea>
+        <button onclick="summarizeText()">Summarize</button>
+        <p id="outputSummary"></p>
+    </div>
+    
+</body>
+</html>

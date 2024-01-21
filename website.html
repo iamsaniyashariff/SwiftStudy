@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift Study</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            align-items:center;
+        }
+
+        header {
+            background-color: #76b1d8;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #666;
+            margin: 20px 0;
+        }
+
+        .get-started-btn {
+            background-color: #66c2ff;
+            color: #cc7474;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .features {
+            margin: 40px;
+        }
+
+        .feature {
+            background-color: #89c975;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Swift Study</h1>
+        <p class="quote"><i>"Your all in one study buddy."</i></p>
+        <a href="#" class="get-started-btn">Get Started</a>
+    </header>
+
+    <nav>
+        <a href="#">Login</a>
+        <a href="#">Profile</a>
+        <a href="#">About Us</a>
+    </nav>
+
+    <div class="features">
+        <div class="feature">
+            <h2>Text Summarizer</h2>
+            <p>Effortlessly condense large amounts of text into concise summaries for efficient studying.</p>
+        <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: mintcream; /* Mint green background */
+        }
+
+        #container {
+            text-align: center;
+            padding: 20px;
+            background-color: #336699;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #inputText {
+            width: 80%;
+            height: 150px;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: white;
+            background-color: #003366;
+        }
+
+        #outputSummary {
+            color: white;
+        }
+
+        button {
+            background-color: #66ccff;
+            color: #003366;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <div id="container">
+        <h1 style="color: white;">Text Summarizer</h1>
+        <textarea id="inputText" placeholder="Enter up to 500 words..."></textarea>
+        <button onclick="summarizeText()">Summarize</button>
+        <p id="outputSummary"></p>
+    </div>
+
+    <script>
+        function summarizeText() {
+            var inputText = document.getElementById("inputText").value;
+
+            // Ensure the input text is not empty
+            if (inputText.trim() === "") {
+                alert("Please enter text before summarizing.");
+                return;
+            }
+
+            // Simple summarization logic (cut off at 150 characters)
+            var summary = inputText.slice(0, 150);
+
+            document.getElementById("outputSummary").innerText = summary;
+        }
+    </script>
+
+
+        </div>
+
+        <div class="feature">
+            <h2>Flashcards</h2>
+            <p>Enhance your memory retention with interactive flashcards for effective learning.</p>
+            <!-- Include your Flashcards code here -->
+        </div>
+
+        <div class="feature">
+            <h2>Mind Maps</h2>
+            <p>Visualize complex concepts and relationships with mind maps, making learning engaging and intuitive.</p>
+            <!-- Include your Mind Maps code here -->
+        </div>
+    </div>
+</body>
+
+</html>
